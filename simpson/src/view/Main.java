@@ -1,18 +1,35 @@
 package view;
 
+import model.Logica;
 import processing.core.PApplet;
 
 public class Main extends PApplet{
+	
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 PApplet.main(Main.class.getName());
 	}
 	
-	public void settings() {}
+	Logica log;
 	
-	public void setup() {}
+	public void settings() {
+		
+		size(800,800);
+	}
 	
-	public void draw() {}
+	public void setup() {
+		log = new Logica(this);
+
+	}
+	
+	public void draw() {
+		background(255,255,255);
+		log.pintar();
+		
+		
+		
+	}
 
 }

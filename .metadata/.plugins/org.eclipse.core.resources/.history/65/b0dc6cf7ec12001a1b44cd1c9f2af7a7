@@ -1,0 +1,21 @@
+package model;
+
+import view.Main;
+
+public class Logica extends Main{
+private int click;
+Thread hom=new Thread(new Omero(this));
+	public  Logica(){
+
+	
+		
+	}
+	
+	public void pintar() {
+		
+		
+		hom.start();
+		
+		
+	}
+}

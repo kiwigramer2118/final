@@ -1,0 +1,19 @@
+package model;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class Omero {
+	
+	private PApplet app;
+	private PImage img;
+
+	public Omero(PApplet app) {
+		this.app = app;
+	img=app.loadImage("img/homero_simpson");
+		
+		
+		
+	}
+
+}

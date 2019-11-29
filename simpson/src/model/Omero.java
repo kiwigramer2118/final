@@ -1,5 +1,67 @@
 package model;
 
-public class Omero {
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class Omero implements Runnable{
+	
+
+	private PImage img;
+	private int posX;
+	private int posY;
+	private PApplet app;
+    private int vel =1;
+	public Omero(PApplet app) {
+		this.app = app;
+	img=app.loadImage("./img/homero_simpson.png");
+	this.posX=(int) app.random(150,750);
+	this.posY=(int) app.random(50,750);
+	
+	
+		
+		
+	}
+	
+	public void mover() {
+		
+		this.posX+=this.vel;
+		
+		if(this.posX>750) {
+			this.vel=this.vel*-1;
+		}
+		if(this.posX<100) {
+			this.vel=this.vel*-1;
+		}
+		
+		
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+	
+		
+	}
+	
+	
+	public void pintar() {
+		app.image(img,this.posX,this.posY,100,100);
+	}
+
+	public int getPosX() {
+		return posX;
+	}
+
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+	public int getPosY() {
+		return posY;
+	}
+
+	public void setPosY(int posY) {
+		this.posY = posY;
+	}
 
 }

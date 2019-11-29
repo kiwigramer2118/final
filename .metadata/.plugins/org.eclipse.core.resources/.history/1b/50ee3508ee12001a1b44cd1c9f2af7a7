@@ -1,0 +1,31 @@
+package model;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class Omero implements Runnable{
+	
+	private PApplet app;
+	private PImage img;
+	private int posX;
+	private int posY;
+
+	public Omero(PApplet app) {
+		this.app = app;
+	this.img=app.loadImage("img/homero_simpson.png");
+	this.posX=(int) app.random(150,750);
+	this.posY=(int) app.random(50,750);
+	
+	app.image(img,this.posX,this.posY,100,100);
+		
+		
+		
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

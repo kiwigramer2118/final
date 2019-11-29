@@ -1,0 +1,27 @@
+package model;
+
+import processing.core.PApplet;
+import view.Main;
+
+public class Logica extends Main{
+private int click;
+Thread hom =new Thread(new Omero(this));
+  
+
+	private PApplet app;
+	public Logica(PApplet app){
+		
+		this.app=app;
+
+		
+		
+	}
+	
+	public void pintar() {
+		app.ellipse(100, 100, 100, 100);
+		
+		hom.start();
+		
+		
+	}
+}

@@ -1,0 +1,31 @@
+package model;
+
+import processing.core.PApplet;
+import view.Main;
+
+public class Logica extends Main{
+private int click;
+Omero om;
+private PApplet app2;
+
+  
+	public Logica(PApplet appp){
+		
+		this.app2=appp;
+		Omero om =new Omero(this);
+	  
+	
+
+	
+		
+	}
+	
+	public void pintar() {
+		
+		om.pintar();
+		
+		
+		
+		
+	}
+}
